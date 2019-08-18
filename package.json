@@ -2,7 +2,6 @@
   "name": "react-tiny-hooks",
   "version": "1.0.0",
   "description": "Small, dependency free hooks for React.js",
-  "main": "index.js",
   "scripts": {
     "build": "babel source -d ./build",
     "build:ci": "babel source -d .",
@@ -10,6 +9,12 @@
     "dev": "ava --watch",
     "test": "ava --verbose"
   },
+  "files": [
+    "*.js",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asbjornh/react-tiny-hooks.git"
