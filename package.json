@@ -11,6 +11,8 @@
   },
   "files": [
     "*.js",
+    "!*.config.js",
+    "utils",
     "CHANGELOG.md",
     "README.md",
     "LICENSE"
