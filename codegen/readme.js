@@ -9,17 +9,25 @@ const readFile = relPath =>
 
 const readmeHeader = readFile('../source/readme-header.md');
 
-const docs = fs
+const sourceFiles = fs
   .readdirSync(path.resolve(__dirname, '../source'))
-  .filter(item => item.match(/\.js$/))
-  .map(fileName => {
-    try {
-      const fileContent = readFile(`../source/${fileName}`);
-      return makeDocsForFile(fileName, fileContent);
-    } catch (error) {
-      console.error(`Doc generation failed for '${fileName}':`, error.message);
-    }
-  });
+  .filter(item => item.match(/\.js$/));
 
-const readmeContent = [readmeHeader].concat(docs).join('\n\n');
+const tableOfContents = sourceFiles
+  .map(fileName => {
+    const link = fileName.replace('.js', '');
+    return `- [${link}](#${link})`;
+  })
+  .join('\n');
+
+const docs = sourceFiles.map(fileName => {
+  try {
+    const fileContent = readFile(`../source/${fileName}`);
+    return makeDocsForFile(fileName, fileContent);
+  } catch (error) {
+    console.error(`Doc generation failed for '${fileName}':`, error.message);
+  }
+});
+
+const readmeContent = [readmeHeader].concat(tableOfContents, docs).join('\n\n');
 fs.writeFileSync(path.resolve(__dirname, '../README.md'), readmeContent);

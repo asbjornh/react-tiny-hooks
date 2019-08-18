@@ -17,6 +17,7 @@ module.exports = function(fileName, fileContent) {
     .join(', ');
 
   return [
+    `<a id="${fileName.replace('.js', '')}"></a>`,
     `### ${exportNode.id.name}(${params.length ? `_${params}_` : ''})`,
     '',
     `**Import:** _react-tiny-hooks/${fileName.replace('.js', '')}_`,

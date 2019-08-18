@@ -15,6 +15,18 @@ New hooks or ideas for new hooks are very welcome, as long as they are simple an
 ## Hooks
 
 
+- [use-counter](#use-counter)
+- [use-debounce](#use-debounce)
+- [use-event](#use-event)
+- [use-is-mounted](#use-is-mounted)
+- [use-on-click-outside](#use-on-click-outside)
+- [use-on-escape](#use-on-escape)
+- [use-previous](#use-previous)
+- [use-scroll-position](#use-scroll-position)
+- [use-throttle](#use-throttle)
+- [use-toggle](#use-toggle)
+
+<a id="use-counter"></a>
 ### useCounter(_initialValue = 0, min = 0, max = Infinity, step = 1_)
 
 **Import:** _react-tiny-hooks/use-counter_
@@ -29,6 +41,7 @@ const [current, next, previous, goTo] = useCounter(0, 0, slides.length);
 ```
  
 
+<a id="use-debounce"></a>
 ### useDebounce(_value, wait = 0_)
 
 **Import:** _react-tiny-hooks/use-debounce_
@@ -42,6 +55,7 @@ const debouncedState = useDebounce(state, 200);
 ```
 
 
+<a id="use-event"></a>
 ### useEvent(_eventName, eventHandler, dependencies = []_)
 
 **Import:** _react-tiny-hooks/use-event_
@@ -60,6 +74,7 @@ useEvent("keydown", onKeydown, [onKeyDown]);
 ```
 
 
+<a id="use-is-mounted"></a>
 ### useIsMounted()
 
 **Import:** _react-tiny-hooks/use-is-mounted_
@@ -71,6 +86,7 @@ const isMounted = useIsMounted();
 ```
 
 
+<a id="use-on-click-outside"></a>
 ### useOnClickOutside(_callback, dependencies = []_)
 
 **Import:** _react-tiny-hooks/use-on-click-outside_
@@ -84,6 +100,7 @@ return <div ref={ref} />;
 ```
 
 
+<a id="use-on-escape"></a>
 ### useOnEscape(_callback, dependencies = []_)
 
 **Import:** _react-tiny-hooks/use-on-escape_
@@ -95,6 +112,7 @@ useOnEscape(() => console.log("Escape was pressed!"));
 ```
  
 
+<a id="use-previous"></a>
 ### usePrevious(_value, initialValue_)
 
 **Import:** _react-tiny-hooks/use-previous_
@@ -107,6 +125,7 @@ const previousValue = usePrevious(value);
 ```
  
 
+<a id="use-scroll-position"></a>
 ### useScrollPosition()
 
 **Import:** _react-tiny-hooks/use-scroll-position_
@@ -118,6 +137,7 @@ const scrollPosition = useScrollPosition();
 ```
  
 
+<a id="use-throttle"></a>
 ### useThrottle(_value, wait = 0_)
 
 **Import:** _react-tiny-hooks/use-throttle_
@@ -131,6 +151,7 @@ const throttledState = useThrottle(state, 200);
 ```
 
 
+<a id="use-toggle"></a>
 ### useToggle(_initialValue = false_)
 
 **Import:** _react-tiny-hooks/use-toggle_
