@@ -1,0 +1,4 @@
+{
+  "plugins": [["@babel/plugin-transform-destructuring", { "loose": true }]],
+  "presets": ["@babel/preset-env"]
+}

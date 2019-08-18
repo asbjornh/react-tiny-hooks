@@ -1,0 +1,51 @@
+{
+  "name": "react-tiny-hooks",
+  "version": "1.0.0",
+  "description": "Small, dependency free hooks for React.js",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel source -d ./build",
+    "build:ci": "babel source -d .",
+    "build:docs": "node codegen/readme",
+    "dev": "ava --watch",
+    "test": "ava --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asbjornh/react-tiny-hooks.git"
+  },
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "author": "Asbjørn Hegdahl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asbjornh/react-tiny-hooks/issues"
+  },
+  "homepage": "https://github.com/asbjornh/react-tiny-hooks#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-destructuring": "^7.5.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.5.5",
+    "@testing-library/react": "^9.1.1",
+    "ava": "^2.2.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^4.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "jsdom": "^15.1.1",
+    "jsdom-global": "^3.0.2",
+    "ninos": "^3.0.0",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0"
+  }
+}
